@@ -41,7 +41,7 @@ def index(request):
         'experiences': Experience.objects.all(),
         'projects': Project.objects.all(),
         'form':form,
-        'footer': Footer.objects.get(id=1)
+        'footer': Footer.objects.get(id=1),
     }
     return render(request, "index.html", context)
 
