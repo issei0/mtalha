@@ -23,9 +23,11 @@
 <body>
     <!--navigation-->
     <nav class="navbar navbar-expand-lg">
-        <a href="{{ main.link }}">
-            <img class="navbar-brand" src="{{ main.homeimage.url }}" onclick="window.location.href=''" alt="">
-        </a>
+        {% for main in mains %}
+            <a href="{{ main.link }}">
+                <img class="navbar-brand" src="{{ main.homeimage_url }}" onclick="window.location.href=''" alt="">
+            </a>
+        {% endfor %}
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

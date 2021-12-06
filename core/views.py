@@ -32,7 +32,7 @@ def index(request):
     form = ContactForm()
     context = {
         'links': Link.objects.all(),
-        'main': Main.objects.get(id=1),
+        'mains': Main.objects.all(),
         'about': Heading.objects.get(id=1),
         'servic': Heading.objects.get(id=2),
         'experience': Heading.objects.get(id=3),
@@ -50,7 +50,7 @@ def thankyou(request):
         name=request.GET.get('nam')
     context = {
         'links': Link.objects.all(),
-        'main': Main.objects.get(id=1),
+        'mains': Main.objects.all(),
         'sender': name,
         'footer': Footer.objects.get(id=1)
     }
@@ -63,7 +63,7 @@ def services(request):
     services = paginator.get_page(page)
     context = {
         'links': Link.objects.all(),
-        'main': Main.objects.get(id=1),
+        'mains': Main.objects.all(),
         'servic': Heading.objects.get(id=2),
         'services': services,
         'footer': Footer.objects.get(id=1)
@@ -77,7 +77,7 @@ def experience(request):
     experiences = paginator.get_page(page)
     context = {
         'links': Link.objects.all(),
-        'main': Main.objects.get(id=1),
+        'mains': Main.objects.all(),
         'experience': Heading.objects.get(id=3),
         'experiences': experiences,
         'footer': Footer.objects.get(id=1)
@@ -91,7 +91,7 @@ def projects(request):
     projects = paginator.get_page(page)
     context = {
         'links': Link.objects.all(),
-        'main': Main.objects.get(id=1),
+        'mains': Main.objects.all(),
         'project': Heading.objects.get(id=4),
         'projects': projects,
         'footer': Footer.objects.get(id=1)
