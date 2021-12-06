@@ -4,21 +4,19 @@
     <header>
         <div class="d-flex main" style="padding: 5% 10%;">
             <!--text-->
-            {% for main in mains %}
-                <div class="d-inline-flex flex-column justify-content-center main-inline">
-                    <p>{{ main.text1 }},</p>
-                    <h1>{{ main.text2 }}</h1>
-                    <p>{{ main.text3 }}<br>{{ main.text4 }}</p>
-                    <div>
-                        <button type ="button" class="btn blackish" onclick="window.location.href='{{ main.link1 }}'">{{ main.button1 }}</button>
-                        <button type ="button" class="btn blackish">{{ main.button2 }}</button>
-                    </div>
+            <div class="d-inline-flex flex-column justify-content-center main-inline">
+                <p>{{ main.text1 }},</p>
+                <h1>{{ main.text2 }}</h1>
+                <p>{{ main.text3 }}<br>{{ main.text4 }}</p>
+                <div>
+                    <button type ="button" class="btn blackish" onclick="window.location.href='{{ main.link1 }}'">{{ main.button1 }}</button>
+                    <button type ="button" class="btn blackish">{{ main.button2 }}</button>
                 </div>
-                <!--model-->
-                <div class="flex-img">
-                    <img alt="model" src="{{ main.image1_url }}">
-                </div>
-            {% endfor %}
+            </div>
+            <!--model-->
+            <div class="flex-img">
+                <img alt="model" src="{{ main.image1.url }}">
+            </div>
         </div>
     </header>
     <section>

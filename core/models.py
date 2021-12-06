@@ -24,14 +24,9 @@ class Main(models.Model):
     link2 = models.URLField(max_length=200, blank=True, null=True)
     
     @property
-    def image1_url(self):
-        if self.image1 and hasattr(self.image1, 'url'):
-            return self.image1.url
-        
-    @property
-    def homeimage_url(self):
-        if self.homeimage and hasattr(self.homeimage, 'url'):
-            return self.homeimage.url
+    def image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url
     
     def __str__(self):
         return str(self.name)
